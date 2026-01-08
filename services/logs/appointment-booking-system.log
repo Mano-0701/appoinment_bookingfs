@@ -1,0 +1,210 @@
+2026-01-08 08:03:45 - Starting AppointmentBookingSystemApplication using Java 17.0.12 with PID 16548 (C:\Users\ers1403\OneDrive - Intellius Recode Pvt.Ltd\Desktop\Recode academey\Full Stack training\appoinment_bookingfs\services\target\classes started by ERS1403 in C:\Users\ers1403\OneDrive - Intellius Recode Pvt.Ltd\Desktop\Recode academey\Full Stack training\appoinment_bookingfs\services)
+2026-01-08 08:03:45 - Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-01-08 08:03:45 - No active profile set, falling back to 1 default profile: "default"
+2026-01-08 08:03:47 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-08 08:03:48 - Finished Spring Data repository scanning in 203 ms. Found 3 JPA repository interfaces.
+2026-01-08 08:03:50 - Tomcat initialized with port 8081 (http)
+2026-01-08 08:03:50 - Starting service [Tomcat]
+2026-01-08 08:03:50 - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-08 08:03:51 - Initializing Spring embedded WebApplicationContext
+2026-01-08 08:03:51 - Root WebApplicationContext: initialization completed in 5693 ms
+2026-01-08 08:03:51 - Filter 'jwtAuthenticationFilter' configured for use
+2026-01-08 08:03:52 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-08 08:03:52 - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-08 08:03:52 - HHH000026: Second-level cache disabled
+2026-01-08 08:03:54 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-08 08:03:54 - HikariPool-1 - Starting...
+2026-01-08 08:03:55 - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/appointment_db user=SA
+2026-01-08 08:03:55 - HikariPool-1 - Start completed.
+2026-01-08 08:03:55 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-08 08:03:56 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-08 08:03:59 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-08 08:04:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-08 08:04:01 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-08 08:04:03 - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-01-08 08:04:03 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-08 08:04:04 - ? SecurityConfig loaded — CORS enabled
+2026-01-08 08:04:04 - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-08 08:04:05 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/appointment_db'
+2026-01-08 08:04:05 - Tomcat started on port 8081 (http) with context path '/'
+2026-01-08 08:04:05 - Started AppointmentBookingSystemApplication in 22.6 seconds (process running for 23.994)
+2026-01-08 08:04:06 - select a1_0.id,a1_0.email,a1_0.name,a1_0.password from admins a1_0 where a1_0.email=?
+2026-01-08 08:04:06 - ??  Admin user already exists, skipping initialization
+2026-01-08 08:05:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-08 08:05:10 - Initializing Servlet 'dispatcherServlet'
+2026-01-08 08:05:10 - Completed initialization in 3 ms
+2026-01-08 08:05:10 - Securing OPTIONS /api/auth/login
+2026-01-08 08:05:10 - Securing POST /api/auth/login
+2026-01-08 08:05:10 - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-08 08:05:10 - Secured POST /api/auth/login
+2026-01-08 08:05:11 - select a1_0.id,a1_0.email,a1_0.name,a1_0.password from admins a1_0 where a1_0.email=?
+2026-01-08 08:05:11 - Securing OPTIONS /api/users
+2026-01-08 08:05:11 - Securing OPTIONS /api/users
+2026-01-08 08:05:11 - Securing GET /api/users
+2026-01-08 08:05:11 - Secured GET /api/users
+2026-01-08 08:05:11 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 08:05:11 - Securing GET /api/users
+2026-01-08 08:05:11 - Secured GET /api/users
+2026-01-08 08:05:11 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 08:05:23 - Securing OPTIONS /api/users
+2026-01-08 08:05:23 - Securing OPTIONS /api/appointments
+2026-01-08 08:05:23 - Securing OPTIONS /api/appointments
+2026-01-08 08:05:23 - Securing OPTIONS /api/users
+2026-01-08 08:05:23 - Securing OPTIONS /api/appointments
+2026-01-08 08:05:23 - Securing OPTIONS /api/appointments
+2026-01-08 08:05:23 - Securing GET /api/users
+2026-01-08 08:05:23 - Securing GET /api/appointments
+2026-01-08 08:05:23 - Secured GET /api/users
+2026-01-08 08:05:23 - Secured GET /api/appointments
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 08:05:23 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:23 - Securing GET /api/users
+2026-01-08 08:05:23 - Secured GET /api/users
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:23 - Securing GET /api/appointments
+2026-01-08 08:05:23 - Secured GET /api/appointments
+2026-01-08 08:05:23 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:23 - Securing GET /api/appointments
+2026-01-08 08:05:23 - Secured GET /api/appointments
+2026-01-08 08:05:23 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:23 - Securing GET /api/appointments
+2026-01-08 08:05:23 - Secured GET /api/appointments
+2026-01-08 08:05:23 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:23 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:25 - Securing GET /api/users
+2026-01-08 08:05:25 - Securing GET /api/appointments
+2026-01-08 08:05:26 - Secured GET /api/appointments
+2026-01-08 08:05:26 - Secured GET /api/users
+2026-01-08 08:05:26 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:26 - Securing GET /api/users
+2026-01-08 08:05:26 - Securing GET /api/appointments
+2026-01-08 08:05:26 - Secured GET /api/users
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 08:05:26 - Secured GET /api/appointments
+2026-01-08 08:05:26 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:26 - Securing GET /api/appointments
+2026-01-08 08:05:26 - Secured GET /api/appointments
+2026-01-08 08:05:26 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:26 - Securing GET /api/appointments
+2026-01-08 08:05:26 - Secured GET /api/appointments
+2026-01-08 08:05:26 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:05:26 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 08:06:17 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-08 08:06:18 - Graceful shutdown complete
+2026-01-08 08:06:18 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-08 08:06:18 - HikariPool-1 - Shutdown initiated...
+2026-01-08 08:06:18 - HikariPool-1 - Shutdown completed.
+2026-01-08 11:49:53 - Starting AppointmentBookingSystemApplication using Java 17.0.12 with PID 7872 (C:\Users\ers1403\OneDrive - Intellius Recode Pvt.Ltd\Desktop\Recode academey\Full Stack training\appoinment_bookingfs\services\target\classes started by ERS1403 in C:\Users\ers1403\OneDrive - Intellius Recode Pvt.Ltd\Desktop\Recode academey\Full Stack training\appoinment_bookingfs\services)
+2026-01-08 11:49:53 - Running with Spring Boot v3.5.9, Spring v6.2.15
+2026-01-08 11:49:53 - No active profile set, falling back to 1 default profile: "default"
+2026-01-08 11:49:55 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-08 11:49:55 - Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2026-01-08 11:49:56 - Tomcat initialized with port 8081 (http)
+2026-01-08 11:49:56 - Starting service [Tomcat]
+2026-01-08 11:49:56 - Starting Servlet engine: [Apache Tomcat/10.1.50]
+2026-01-08 11:49:56 - Initializing Spring embedded WebApplicationContext
+2026-01-08 11:49:56 - Root WebApplicationContext: initialization completed in 2249 ms
+2026-01-08 11:49:56 - Filter 'jwtAuthenticationFilter' configured for use
+2026-01-08 11:49:56 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-08 11:49:56 - HHH000412: Hibernate ORM core version 6.6.39.Final
+2026-01-08 11:49:56 - HHH000026: Second-level cache disabled
+2026-01-08 11:49:57 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-08 11:49:57 - HikariPool-1 - Starting...
+2026-01-08 11:49:57 - HikariPool-1 - Added connection conn0: url=jdbc:h2:file:./data/appointment_db user=SA
+2026-01-08 11:49:57 - HikariPool-1 - Start completed.
+2026-01-08 11:49:57 - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-08 11:49:57 - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-08 11:49:58 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-08 11:49:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-08 11:49:59 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-08 11:50:00 - No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2026-01-08 11:50:00 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-08 11:50:00 - ? SecurityConfig loaded — CORS enabled
+2026-01-08 11:50:00 - Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, JwtAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-01-08 11:50:00 - H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/appointment_db'
+2026-01-08 11:50:00 - Tomcat started on port 8081 (http) with context path '/'
+2026-01-08 11:50:00 - Started AppointmentBookingSystemApplication in 7.833 seconds (process running for 8.469)
+2026-01-08 11:50:00 - select a1_0.id,a1_0.email,a1_0.name,a1_0.password from admins a1_0 where a1_0.email=?
+2026-01-08 11:50:00 - ??  Admin user already exists, skipping initialization
+2026-01-08 11:57:38 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-08 11:57:38 - Initializing Servlet 'dispatcherServlet'
+2026-01-08 11:57:38 - Completed initialization in 4 ms
+2026-01-08 11:57:38 - Securing OPTIONS /api/auth/login
+2026-01-08 11:57:38 - Securing POST /api/auth/login
+2026-01-08 11:57:38 - Set SecurityContextHolder to anonymous SecurityContext
+2026-01-08 11:57:38 - Secured POST /api/auth/login
+2026-01-08 11:57:38 - select a1_0.id,a1_0.email,a1_0.name,a1_0.password from admins a1_0 where a1_0.email=?
+2026-01-08 11:57:39 - Securing OPTIONS /api/users
+2026-01-08 11:57:39 - Securing OPTIONS /api/users
+2026-01-08 11:57:39 - Securing GET /api/users
+2026-01-08 11:57:39 - Secured GET /api/users
+2026-01-08 11:57:39 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 11:57:39 - Securing GET /api/users
+2026-01-08 11:57:39 - Secured GET /api/users
+2026-01-08 11:57:39 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 11:57:51 - Securing OPTIONS /api/users
+2026-01-08 11:57:51 - Securing OPTIONS /api/appointments
+2026-01-08 11:57:51 - Securing OPTIONS /api/users
+2026-01-08 11:57:51 - Securing OPTIONS /api/appointments
+2026-01-08 11:57:51 - Securing OPTIONS /api/appointments
+2026-01-08 11:57:51 - Securing GET /api/users
+2026-01-08 11:57:51 - Securing GET /api/appointments
+2026-01-08 11:57:51 - Securing OPTIONS /api/appointments
+2026-01-08 11:57:51 - Secured GET /api/users
+2026-01-08 11:57:51 - Secured GET /api/appointments
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 11:57:51 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 11:57:51 - Securing GET /api/users
+2026-01-08 11:57:51 - Secured GET /api/users
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 11:57:51 - Securing GET /api/appointments
+2026-01-08 11:57:51 - Secured GET /api/appointments
+2026-01-08 11:57:51 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 11:57:51 - Securing GET /api/appointments
+2026-01-08 11:57:51 - Secured GET /api/appointments
+2026-01-08 11:57:51 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 11:57:51 - Securing GET /api/appointments
+2026-01-08 11:57:51 - Secured GET /api/appointments
+2026-01-08 11:57:51 - select a1_0.id,a1_0.appointment_date_time,a1_0.created_at,a1_0.notes,a1_0.status,a1_0.updated_at,a1_0.user_id from appointments a1_0
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 11:57:51 - select u1_0.id,u1_0.email,u1_0.name,u1_0.phone_number from users u1_0 where u1_0.id=?
+2026-01-08 12:41:51 - Commencing graceful shutdown. Waiting for active requests to complete
+2026-01-08 12:41:51 - Graceful shutdown complete
+2026-01-08 12:41:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-08 12:41:51 - HikariPool-1 - Shutdown initiated...
+2026-01-08 12:41:51 - HikariPool-1 - Shutdown completed.
