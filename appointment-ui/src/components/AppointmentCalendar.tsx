@@ -51,7 +51,7 @@ const AppointmentCalendar = ({ onAppointmentCreated }: AppointmentCalendarProps)
       const data = await getAllAppointments();
       setAppointments(data);
     } catch (err) {
-      console.error("Failed to load appointments:", err);
+      console.error("Failed to load appointment:", err);
     }
   };
 
