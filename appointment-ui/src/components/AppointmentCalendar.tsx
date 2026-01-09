@@ -13,12 +13,13 @@ interface AppointmentCalendarProps {
 }
 
 const AppointmentCalendar = ({ onAppointmentCreated }: AppointmentCalendarProps) => {
-  const [selectedDate, setSelectedDate] = useState<string>(
-    new Date().toISOString().split("T")[0]
-  );
+  const today = new Date().toISOString().split("T")[0];
+
+  const [selectedDate, setSelectedDate] = useState<string>(today);
   const [selectedTime, setSelectedTime] = useState<string>("09:00");
   const [selectedUserId, setSelectedUserId] = useState<number | null>(null);
   const [notes, setNotes] = useState<string>("");
+
   const [users, setUsers] = useState<User[]>([]);
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [loading, setLoading] = useState(false);
@@ -40,9 +41,6 @@ const AppointmentCalendar = ({ onAppointmentCreated }: AppointmentCalendarProps)
     try {
       const data = await getAllUsers();
       setUsers(data);
-      if (data.length > 0 && !selectedUserId) {
-        setSelectedUserId(data[0].id || null);
-      }
     } catch (err) {
       console.error("Failed to load users:", err);
     }
@@ -78,7 +76,7 @@ const AppointmentCalendar = ({ onAppointmentCreated }: AppointmentCalendarProps)
 
     try {
       const dateTime = `${selectedDate}T${selectedTime}:00`;
-      
+
       // Check availability
       const available = await checkAvailability(dateTime);
       if (!available) {
@@ -95,24 +93,24 @@ const AppointmentCalendar = ({ onAppointmentCreated }: AppointmentCalendarProps)
 
       const appointment = await createAppointment(request);
       setSuccess("Appointment booked successfully!");
-      setNotes("");
-      setSelectedTime("09:00");
-      
-      // Reload appointments
-      await loadAppointments();
-      
-      if (onAppointmentCreated) {
-        onAppointmentCreated(appointment);
-      }
 
-      // Clear success message after 3 seconds
+      // ✅ RESET FORM AFTER SUCCESS
+      setSelectedUserId(null);
+      setSelectedDate(today);
+      setSelectedTime("09:00");
+      setNotes("");
+
+      await loadAppointments();
+
+      onAppointmentCreated?.(appointment);
+
       setTimeout(() => setSuccess(""), 3000);
     } catch (err: any) {
       console.error("Failed to book appointment:", err);
       setError(
         err.response?.data?.message ||
-        err.message ||
-        "Failed to book appointment. Please try again."
+          err.message ||
+          "Failed to book appointment. Please try again."
       );
     } finally {
       setLoading(false);
@@ -144,8 +142,8 @@ const AppointmentCalendar = ({ onAppointmentCreated }: AppointmentCalendarProps)
             Select User *
           </label>
           <select
-            value={selectedUserId || ""}
-            onChange={(e) => setSelectedUserId(Number(e.target.value))}
+            value={selectedUserId ?? ""}
+            onChange={(e) => setSelectedUserId(Number(e.target.value) || null)}
             className="w-full p-2 border rounded focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
             required
           >
@@ -167,7 +165,7 @@ const AppointmentCalendar = ({ onAppointmentCreated }: AppointmentCalendarProps)
             type="date"
             value={selectedDate}
             onChange={(e) => setSelectedDate(e.target.value)}
-            min={new Date().toISOString().split("T")[0]}
+            min={today}
             className="w-full p-2 border rounded focus:ring-2 focus:ring-sky-500 focus:border-sky-500"
             required
           />
